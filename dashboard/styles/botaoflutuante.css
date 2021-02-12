@@ -49,6 +49,7 @@
 .ul .li{
 	list-style:none;
 	margin-bottom:10px;
+	cursor: pointer;
 }
 
 .ul .li .a{
@@ -60,11 +61,13 @@
 	width:60px;
 	height:60px;
 	display:block;
+	cursor: pointer;
 }
 
 .ul:hover{
 	visibility:visible!important;
 	opacity:1!important;
+	cursor: pointer;
 }
 
 
