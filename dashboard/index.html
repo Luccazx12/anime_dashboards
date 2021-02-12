@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/96ed792cdd.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/graficos.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <title>Dashboards</title>
+</head>
+
+<body>
+    <!-- HEADER AREA START -->
+
+    <input type="checkbox" id="bt_menu">
+    <header>
+        <label for="bt_menu"><i class="fas fa-bars" id="sidebar_btn"></i></label>
+        <div class="left_area">
+            <h2>Anime<span><br>Dashboards</span></h2>
+        </div>
+        <div class="right_area">
+            <a id="user_btn" href="#"><i class="fas fa-user"></i></a>
+            <a id="settings_btn" href="#"><i class="fas fa-sliders-h"></i></i></a>
+            <a id="sign_out_btn" href="#"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+    </header>
+
+    <!-- HEADER AREA END -->
+
+
+    <!-- SIDEBAR AREA START -->
+    <ul class="menu">
+        <div id="divlogo">
+            <img id="logo" src="./images/aktsuki4.png" alt="">
+        </div>
+        <li><a href="https://www.google.com/"><i class="fas fa-th"></i><span> Dashboards</span></a></li>
+        <li><a href="#"><i class="fas fa-desktop"></i><span> Supervisão</span></a></li>
+        <li><a href="#"><i class="fas fa-chart-bar"></i><span> Relatórios</span></a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i><span> Análises</span></a></li>
+        <li><a href="#"><i class="fas fa-wallet"></i><span> Finanças</span></a></li>
+        <li><a href="#"><i class="fas fa-sort-numeric-up-alt"></i><span> Ranking</span></a></li>
+        <li><a href="#"><i class="fas fa-ruler"></i><span> Metas</span></a></li>
+        <li><a href="#"><i class="fas fa-comment"></i><span> Mensagens</span></a></li>
+        <li><a href="#"><i class="fas fa-user"></i><span> Perfil</span></a></li>
+        <li><a href="#"><i class="fas fa-cog"></i><span> Opções</span></a></li>
+    </ul>
+    <!-- SIDEBAR AREA END-->
+
+    <!-- Div principal dos cards START-->
+    <main id="graficos">
+
+        <!-- Menu de páginas do site (barra do começo)-->
+        <div id="menupaginas">
+            <h3 style="margin-top: 5px; margin-left: 5px;">Pagina 1</h3>
+            <a><i style="float:right; margin-top: -20px; margin-right: 5px;" class="fas fa-caret-down"></i></a>
+        </div>
+
+        <!-- Botões da direita da página -->
+        <!-- FULLSCREEN -->
+        <button class="btnimg" onclick="AtivarDesativarFS()">
+            <i class="fas fa-expand-alt"></i>
+        </button>
+
+        <!-- Botão inativo -->
+        <a target=_blank href="./images/alan_vesgo.png" class="btnimg" id="btnimg2">
+            <i class="fas fa-poop"></i>
+        </a>
+
+
+        <!-------------------------------- CARDS AREA START------------------------------>
+
+        <!-------------------------------- CARD GRÁFICO 1 ------------------------------->
+        <div id="card1" class="cards">
+            <!-- Parte de cima do Card - Titulo -->
+            <div class="headercard">
+                <h3 class="titulo" style="margin-left: 10px; padding-top: 5px;">Animes mais assistidos: América do Sul</h3>
+                <!-- Botão para passar os gráficos (inativo) -->
+                <a><i style="float:right; margin-right: 5px; margin-top: -20px;" class="arrows fas fa-chevron-right"></i></a>
+                <a><i style="float:right; margin-right: 20px; margin-top: -20px;" class="arrows fas fa-chevron-left"></i></a>
+            </div>
+            <p style="float:right; margin-top: 2px; text-align: right">12/03/2021</p>
+            <h3 style = "margin-top: 5px;">Mais Assistido:</h3>
+            <h3 style="color: rgb(54, 162, 235);">Dragon Ball Super: 50%</h3>
+            <h3>2º Mais Assistido:</h3>
+            <h3 style="color: rgb(100, 99, 132);">Naruto Shippuden: 40%</h3>
+            <!-- Container Gráfico -->
+            <div class="graficoindv" id="grafico1">
+                <canvas class="doughnut"></canvas>
+            </div>
+        </div>
+
+        <!-------------------------------- CARD GRÁFICO 2 ------------------------------->
+        <div id="card2" class="cards">
+            <!-- Parte de cima do Card - Titulo -->
+            <div class="headercard">
+                <h3 class="titulo" style="margin-left: 10px; padding-top: 5px;">Top 10 Animes do MyAnimeList</h3>
+                <!-- Botão para passar os gráficos (inativo) -->
+                <a><i style="float:right; margin-right: 5px; margin-top: -20px;" class="arrows fas fa-chevron-right"></i></a>
+                <a><i style="float:right; margin-right: 20px; margin-top: -20px;" class="arrows fas fa-chevron-left"></i></a>
+            </div>
+            <p style="float:right; margin-top: 2px; text-align: right;">12/03/2021 <br> <strong>MyAnimeList</strong></p>
+                <h3 style = "margin-top: 5px;">1ª Posição:</h3>
+                <h3 style="color: rgb(54, 162, 235);">Fullmetal Alchemist: Brotherhood</h3>
+                <h3>10ª Posição:</h3>
+                <h3 style="color:rgb(255, 205, 86);">Haikyuu!</h3>
+                <!-- Container Gráfico -->
+                <div class="graficoindv" id="grafico2">
+                    <canvas class="bar-chart"></canvas>
+                </div>
+        </div>
+
+        <!-------------------------------- CARD GRÁFICO 3 ------------------------------->
+        <div id="card3" class="cards">
+            <!-- Parte de cima do Card - Titulo -->
+            <div class="headercard">
+                <h3 class="titulo" style="margin-left: 10px; padding-top: 5px;">Países que mais consomem Animes</h3>
+                <!-- Botão para passar os gráficos (inativo) -->
+                <a><i style="float:right; margin-right: 5px; margin-top: -20px;" class="arrows fas fa-chevron-right"></i></a>
+                <a><i style="float:right; margin-right: 20px; margin-top: -20px;" class="arrows fas fa-chevron-left"></i></a>
+            </div>
+            <p style="float:right; margin-top: 2px; text-align: right">07/08/2019<br><strong>Porto Nerd</strong></p>
+            <h3 style = "margin-top: 5px;">Maior Consumidor:</h3>
+            <h3 style="color:red;">Japão</h3>
+            <h3>2º Maior Consumidor</h3>
+            <h3 style="color:orange">Filipinas</h3>
+            <!-- Container Gráfico -->
+            <div class="graficoindv" id="grafico3">
+                <canvas class="line-chart"></canvas>
+            </div>
+        </div>
+
+        <!-------------------------------- CARD GRÁFICO 4 ------------------------------->
+        <div id="card4" class="cards">
+            <!-- Parte de cima do Card - Titulo -->
+            <div class="headercard">
+                <h3 class="titulo" style="margin-left: 10px; padding-top: 5px;">Paises Consumidores da Crunchyroll</h3>
+                <!-- Botão para passar os gráficos (inativo) -->
+                <a><i style="float:right; margin-right: 5px; margin-top: -20px;" class="arrows fas fa-chevron-right"></i></a>
+                <a><i style="float:right; margin-right: 20px; margin-top: -20px;" class="arrows fas fa-chevron-left"></i></a>
+            </div>
+            <p style="float:right; margin-top: 2px; text-align: right">Primeiro trimestre de 2020</p>
+            <h3 style = "margin-top: 5px;">País que consome mais:</h3>
+            <h3 style="color:rgb(255, 99, 132);">Uruguai</h3>
+            <h3>2º País que consome mais:<h3>
+            <h3 style="color:rgb(255, 159, 64);">Índia</h3>
+            <!-- Container Gráfico -->
+            <div class="graficoindv" id="grafico4">
+                <canvas class="bar-chart2"></canvas>
+            </div>
+        </div>
+
+        <!-------------------------------- CARD GRÁFICO 5 ------------------------------->
+        <div id="card5" class="cards">
+            <!-- Parte de cima do Card - Titulo -->
+            <div class="headercard">
+                <h3 class="titulo" style="margin-left: 10px; padding-top: 5px;">Comparação de Habilidades entre personagens</h3>
+                <!-- Botão para passar os gráficos (inativo) -->
+                <a><i style="float:right; margin-right: 5px; margin-top: -20px;" class="arrows fas fa-chevron-right"></i></a>
+                <a><i style="float:right; margin-right: 20px; margin-top: -20px;" class="arrows fas fa-chevron-left"></i></a>
+            </div>
+            <p style="float:right; margin-top: 2px; text-align: right">12/03/2021</p>
+            <div id = localdojson>
+                <h3 style = "margin-top: 5px;">Categoria do gráfico</h3>
+                <h3>Valor</p>
+                </h3>
+                <h3>Quem foi o vencedor da Categoria</h3>
+                <button id = "btngrafico" onclick = "mostraMaior(0)">Gerar!</button>
+        </div>
+
+
+            <!-- Container Gráfico -->
+            <div class="graficoindv" id="grafico5">
+                <canvas class="radar"></canvas>
+            </div>
+        </div>
+
+        <!-------------------------------- CARD GRÁFICO 6 ------------------------------->
+        <div id="card6" class="cards">
+            <!-- Parte de cima do Card - Titulo -->
+            <div class="headercard">
+                <h3 class="titulo" style="margin-left: 10px; padding-top: 5px; ">Top 10 maiores recompensas de One Piece</h3>
+                <!-- Botão para passar os gráficos (inativo) -->
+                <a><i style="float:right; margin-right: 5px; margin-top: -20px;" class="arrows fas fa-chevron-right"></i></a>
+                <a><i style="float:right; margin-right: 20px; margin-top: -20px;" class="arrows fas fa-chevron-left"></i></a>
+            </div>
+            <p style="float:right; margin-top: 2px; text-align: right">12/03/2021 <br> <strong>One Piece WIKI</strong></p>
+            <h3 style = "margin-top: 5px;">Maior Recompensa:</h3>
+            <h3 style="color:rgb(255, 99, 132);">Gol D. Roger: 5,564,800,000</h3>
+            <h3>Recompensa do Luffy:</h3>
+            <h3 style="color:rgb(255,0,0);">1,500,000,000</h3>
+            <!-- Container Gráfico -->
+            <div class="graficoindv" id="grafico6">
+                <canvas class="recompensas"></canvas>
+            </div>
+        </div>
+        <!--------------------------------- CARDS AREA END -------------------------------->
+    </main>
+    <!-- Div principal dos cards END -->
+    <script src="./js/cards.js"></script>
+    <script src="./js/fullscreen.js"></script>
+    <script src="./js/graficos.js"></script>
+</body>
+
+</html>
