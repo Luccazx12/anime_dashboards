@@ -39,9 +39,9 @@ function mostraMaior(id) {
 let card5 = document.getElementById("localdojson");
 card5.innerHTML =  
 `
-<h3>${deck[id].title}</h3>
-<h3 id = "valor">${deck[id].valor}</h3>
-<h3>${deck[id].nome}</h3>
+<h3>Categoria do gráfico: ${deck[id].title}</h3>
+<h3>Valor: ${deck[id].valor}</h3>
+<h3 id = "cursiva">Quem foi o vencedor da Categoria:${deck[id].nome}</h3>
 <button id = "btngrafico"  onclick = "mostraMaior(1)">Resistência</button>
 <button id = "btngrafico2" onclick = "mostraMaior(2)">Velocidade</button>
 <button id = "btngrafico2" onclick = "mostraMaior(3)">Haki</button>
