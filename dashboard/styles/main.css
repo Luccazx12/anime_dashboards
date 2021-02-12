@@ -129,6 +129,10 @@ label #sidebar_btn:hover{
     align-items: center;
 }
 
+a{
+    cursor: pointer;
+}
+
 h3{
     margin-left: 5px;
 }
