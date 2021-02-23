@@ -5,4 +5,4 @@ Site Responsivo com diferentes tipos de gráficos construidos com base em dados 
 
 ## Wireframe
 
-![Image](https://github.com/Luccazx12/anime_dashboards/blob/main/dashboard/Wireframe/wireframe.png)
+![Image](https://raw.githubusercontent.com/Luccazx12/anime_dashboards/main/dashboard/Wireframe/wireframe.png)
