@@ -3,7 +3,7 @@ Site Responsivo com diferentes tipos de gráficos construidos com base em dados 
 
 **Site:** [**https://luccazx12.github.io/anime_dashboards/dashboard/index.html**](https://luccazx12.github.io/anime_dashboards/dashboard/index.html)
 
-## Wreframe
+## Wireframe
 
 ![Image](https://raw.githubusercontent.com/Luccazx12/anime_dashboards/main/dashboard/Wireframe/wireframe.png)
 
